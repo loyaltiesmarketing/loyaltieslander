@@ -1,0 +1,343 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ink-5);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  height: var(--header-height);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 22px;
+  width: auto;
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 1.75rem;
+  height: 100%;
+}
+
+.navLink {
+  font-size: 0.9375rem;
+  color: var(--brand-body-gray);
+  transition: color 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: var(--ink);
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdownTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  height: 100%;
+}
+
+.chevron {
+  font-size: 0.7rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.dropdownTrigger[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdownPanel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-30%) translateY(6px);
+  width: min(92vw, 720px);
+  padding: 1.25rem 1.25rem 1rem;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  border: 1px solid var(--ink-5);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  z-index: 60;
+}
+
+.dropdownPanelOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-30%) translateY(0);
+}
+
+.industryColumns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem 1.5rem;
+}
+
+.dropdownPanelResources {
+  width: min(92vw, 280px);
+  padding: 0.85rem 0.85rem 0.75rem;
+  transform: translateX(-55%) translateY(6px);
+}
+
+.dropdownPanelResources.dropdownPanelOpen {
+  transform: translateX(-55%) translateY(0);
+}
+
+.resourcesCategoryList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.resourcesCategoryLink {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: var(--ink);
+  line-height: 1.3;
+  transition: background 0.15s ease;
+}
+
+.resourcesCategoryLink:hover {
+  background: color-mix(in srgb, var(--cat-pastel) 70%, #fff);
+}
+
+.resourcesCategoryDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--cat-pastel);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--cat-ink) 18%, transparent);
+}
+
+.resourcesCategorySymbol {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--cat-pastel) 80%, #fff);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.industryColumn {
+  min-width: 0;
+}
+
+.columnLabel {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brand-muted-gray);
+}
+
+.columnList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.industryLink {
+  display: block;
+  padding: 0.35rem 0;
+  font-size: 0.875rem;
+  color: var(--ink);
+  line-height: 1.35;
+  transition: color 0.15s ease;
+}
+
+.industryLink:hover {
+  color: var(--brand-body-gray);
+}
+
+.dropdownFooter {
+  margin-top: 1.1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--ink-5);
+}
+
+.dropdownBrowse {
+  font-size: 0.875rem;
+  color: var(--ink);
+}
+
+.dropdownBrowse:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  flex-shrink: 0;
+}
+
+.login {
+  font-size: 0.9375rem;
+  color: var(--brand-body-gray);
+  transition: color 0.2s ease;
+}
+
+.login:hover {
+  color: var(--ink);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 1.125rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  box-shadow: var(--shadow-float);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.mobileIndustriesWrap {
+  display: block;
+  position: relative;
+}
+
+.mobileNav {
+  border-top: 1px solid var(--ink-5);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.mobileNavInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: var(--header-subnav-height);
+}
+
+.mobileNavLink {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--brand-body-gray);
+  transition: color 0.15s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.mobileNavLink:hover,
+.mobileNavLinkActive {
+  color: var(--ink);
+}
+
+.mobileIndustriesPanel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  max-height: min(70vh, calc(100dvh - var(--header-total-height)));
+  overflow-y: auto;
+  background: var(--surface);
+  border-bottom: 1px solid var(--ink-5);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+}
+
+.mobileIndustriesPanelOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.mobileIndustriesInner {
+  padding-top: 1rem;
+  padding-bottom: 1.15rem;
+}
+
+.mobileIndustriesPanel .industryColumns {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem 1.25rem;
+}
+
+@media (min-width: 900px) {
+  .nav {
+    display: flex;
+  }
+
+  .mobileIndustriesWrap {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dropdownPanel,
+  .chevron {
+    transition: none;
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 36" fill="none">
+  <g fill="#000">
+    <circle cx="10" cy="12" r="5"/>
+    <circle cx="22" cy="12" r="5"/>
+    <circle cx="34" cy="12" r="5"/>
+    <circle cx="16" cy="24" r="5"/>
+    <circle cx="28" cy="24" r="5"/>
+  </g>
+  <text x="48" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif" font-size="20" font-weight="400" fill="#000" letter-spacing="-0.03em">Loyaltys</text>
+</svg>

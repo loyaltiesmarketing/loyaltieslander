@@ -1,0 +1,678 @@
+/* ── Not found ──────────────────────────────────────── */
+.notFound {
+  padding: 5rem 0;
+}
+
+/* ── Hero ───────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding: 5.5rem 0 4.5rem;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--accent, #c4a574) 8%, #faf9f7);
+  z-index: 0;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+.heroEyebrow {
+  margin: 0 0 0.65rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent, #c4a574);
+  font-weight: 500;
+}
+
+.heroHeading {
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.9rem, 4.5vw, 3.25rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.heroSub {
+  margin: 0 0 1.75rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  color: var(--brand-body-gray);
+  line-height: 1.65;
+  max-width: 46ch;
+}
+
+.heroActions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.heroCta {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 1.5rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.9375rem;
+  box-shadow: var(--shadow-float);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.heroCta:hover {
+  transform: translateY(-1px);
+  opacity: 0.88;
+}
+
+.heroShape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroImage {
+  width: min(420px, 90vw);
+  height: min(420px, 90vw);
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: var(--surface-soft);
+}
+
+@media (min-width: 768px) {
+  .heroInner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 7rem 0 5.5rem;
+  }
+  .heroInner {
+    gap: 5rem;
+  }
+}
+
+/* ── Proof marquee ───────────────────────────────────── */
+.proof {
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--ink-5);
+  border-bottom: 1px solid var(--ink-5);
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.proofLabel {
+  text-align: center;
+  margin: 0 0 1.35rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-muted-gray);
+}
+
+.marqueeTrack {
+  overflow: hidden;
+}
+
+.marqueeInner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: marqueeScroll 48s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+.marqueeLogo {
+  display: block;
+  flex-shrink: 0;
+  padding: 0 3.2rem;
+  height: 2.5rem;
+  width: calc(8.5rem + 6.4rem);
+  box-sizing: border-box;
+  opacity: 0.7;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.marqueeCompact {
+  height: 1.7rem;
+  width: calc(6.5rem + 6.4rem);
+}
+
+.marqueeLarge {
+  height: 3.25rem;
+  width: calc(10rem + 6.4rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeInner { animation: none; }
+}
+
+/* ── Problems bento ──────────────────────────────────── */
+.problems {
+  padding: 5rem 0;
+  border-top: 1px solid var(--ink-5);
+}
+
+.problemsHeading {
+  margin: 0 0 2.75rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+/* 2-column bento: image left | cards right */
+.problemsBento {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .problemsBento {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+}
+
+/* Image column */
+.problemsImage {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--ink-5);
+  min-height: 280px;
+}
+
+@media (min-width: 768px) {
+  .problemsImage {
+    min-height: 0;
+  }
+}
+
+.problemsImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Cards column */
+.problemsCards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.problemCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.5rem 1.6rem;
+  border-radius: 14px;
+  border: 1px solid var(--ink-5);
+  background: #fff;
+}
+
+.problemPain {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.problemDetail {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--brand-body-gray);
+  line-height: 1.55;
+}
+
+.problemFix {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--ink);
+  line-height: 1.55;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--ink-5);
+  margin-top: 0.35rem;
+}
+
+.problemsCta {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.problemsCtaLink {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 1.35rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  font-size: 0.9rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.problemsCtaLink:hover {
+  background: var(--ink);
+  color: #fff;
+}
+
+/* ── How it works ────────────────────────────────────── */
+.howItWorks {
+  padding: 5rem 0;
+  background: var(--surface-soft);
+  border-top: 1px solid var(--ink-5);
+}
+
+.howHeading {
+  margin: 0 0 2.75rem;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.stepsGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media (min-width: 640px) {
+  .stepsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    justify-items: stretch;
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  border: 1px solid var(--ink-5);
+  overflow: hidden;
+  background: #fff;
+  width: 100%;
+  max-width: 22rem; /* match desktop 3-col card width */
+}
+
+@media (min-width: 640px) {
+  .step {
+    max-width: none;
+  }
+}
+
+.stepPreviewWrap {
+  flex: 1;
+  background: #f2f2f2;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.stepMeta {
+  padding: 1.1rem 1.2rem 1.3rem;
+  border-top: 1px solid var(--ink-5);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.stepNumber {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--brand-muted-gray);
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.stepBody {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--brand-body-gray);
+  line-height: 1.55;
+}
+
+/* ── Ideas: campaign + reward ────────────────────────── */
+.ideas {
+  padding: 5rem 0;
+  border-top: 1px solid var(--ink-5);
+}
+
+.ideasGrid {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .ideasGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.ideasPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.ideasLabel {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.ideasNote {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--brand-muted-gray);
+  line-height: 1.55;
+  max-width: 42ch;
+}
+
+/* iOS Calendar–style day tiles */
+.calendarGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.calendarDay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.85rem 0.75rem 1rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 16px rgba(0, 0, 0, 0.06);
+  min-height: 148px;
+}
+
+.calendarWeekday {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ff3b30;
+  line-height: 1;
+}
+
+.calendarDate {
+  margin: 0.2rem 0 0.7rem;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.calendarEvent {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--accent, #c4a574) 22%, #ffffff);
+  margin-bottom: 0.45rem;
+}
+
+.calendarEventTitle {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.calendarWhen {
+  margin: 0;
+  font-size: 0.6875rem;
+  color: var(--brand-muted-gray);
+  text-align: center;
+  line-height: 1.35;
+}
+
+.rewardBento {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.rewardCell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 1.4rem;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--accent, #c4a574) 8%, #faf9f7);
+}
+
+.rewardType {
+  margin: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brand-muted-gray);
+  font-weight: 500;
+}
+
+.rewardText {
+  margin: 0;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+/* ── Wallet showcase ─────────────────────────────────── */
+.showcase {
+  padding: 5rem 0 2rem;
+  background: var(--surface-soft);
+  border-top: 1px solid var(--ink-5);
+}
+
+.showcaseHeader {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.showcaseHeading {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.showcaseBody {
+  margin: 0;
+  font-size: clamp(0.975rem, 1.8vw, 1.05rem);
+  color: var(--brand-body-gray);
+  line-height: 1.6;
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+.showcaseTrust {
+  text-align: center;
+  margin: 2rem auto 0;
+  font-size: 0.8rem;
+  color: var(--brand-muted-gray);
+  max-width: 56ch;
+  line-height: 1.55;
+}
+
+/* ── FAQ ─────────────────────────────────────────────── */
+.faq {
+  padding: 5rem 0;
+  border-top: 1px solid var(--ink-5);
+}
+
+.faqInner {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.faqHeading {
+  margin: 0 0 2.5rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqItem {
+  border-bottom: 1px solid var(--ink-5);
+}
+
+.faqItem:first-child {
+  border-top: 1px solid var(--ink-5);
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 1.6vw, 0.9875rem);
+  font-weight: 400;
+  color: var(--ink);
+  text-align: left;
+  font-family: inherit;
+  line-height: 1.45;
+}
+
+.faqChevron {
+  flex-shrink: 0;
+  color: var(--brand-muted-gray);
+  transition: transform 0.2s ease;
+}
+
+.faqOpen .faqChevron {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  margin: 0 0 1.2rem;
+  font-size: 0.875rem;
+  color: var(--brand-body-gray);
+  line-height: 1.7;
+  max-width: 64ch;
+}
+
+/* ── Final CTA ───────────────────────────────────────── */
+.finalCta {
+  position: relative;
+  padding: 6rem 0 7rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.finalCtaBg {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--accent, #c4a574) 10%, #faf9f7);
+  z-index: 0;
+}
+
+.finalCtaInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.finalCtaHeading {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.finalCtaButton {
+  display: inline-flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 2rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: var(--shadow-float);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.finalCtaButton:hover {
+  transform: translateY(-2px);
+  opacity: 0.88;
+}

@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+
+# Resources (blog)
+Allow: /resources
+Allow: /resources/customer-loyalty-program-software
+Allow: /resources/how-to-design-a-loyalty-program
+Allow: /resources/loyalties-platform
+Allow: /resources/best-loyalty-programs-for-barbershops
+Allow: /resources/best-loyalty-apps-for-cafes-australia
+Allow: /resources/why-app-loyalty-programs-dont-work
+Allow: /resources/restaurant-loyalty-programs-that-drive-sales
+Allow: /resources/rewards-program-for-nail-salons
+Allow: /resources/how-much-revenue-can-a-loyalty-program-make
+Allow: /resources/benefits-of-rewards-program-for-bakery-customers
+Allow: /resources/benefits-of-loyalty-program-for-bars
+Allow: /resources/good-loyalty-app-for-hairdressers
+Allow: /resources/attract-customers-to-clothing-store
+Allow: /resources/free-loyalty-card-app-small-business
+Allow: /resources/increase-sales-at-a-cafe
+Allow: /resources/attract-customers-landscaping-business
+Allow: /resources/most-popular-loyalty-program
+Allow: /resources/best-loyalty-card-app
+Allow: /resources/best-loyalty-programs-for-cafes
+Allow: /resources/attract-customers-to-your-cafe
+Allow: /resources/benefits-of-loyalty-program-for-cafes
+Allow: /resources/best-loyalty-programs-for-restaurants
+Allow: /resources/increase-sales-at-a-restaurant
+Allow: /resources/rewards-program-for-restaurants
+Allow: /resources/best-loyalty-programs-for-bars
+Allow: /resources/attract-more-customers-to-a-bar
+Allow: /resources/rewards-program-for-bars
+Allow: /resources/best-loyalty-programs-for-bakeries
+Allow: /resources/increase-sales-at-a-bakery
+Allow: /resources/good-loyalty-app-for-bakeries
+
+Sitemap: https://loyalties.marketing/sitemap.xml

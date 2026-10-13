@@ -1,0 +1,125 @@
+# Loyalties — Digital Stamp Card Platform for Local Businesses
+# https://loyalties.marketing
+# This file lists all resource articles for LLM indexing.
+
+## Resources
+
+### Customer Loyalty Program Software: What It Does and How to Choose It
+URL: https://loyalties.marketing/resources/customer-loyalty-program-software
+Learn what customer loyalty program software actually does, how to choose the right type for your business and where Loyalties fits in.
+
+### How to Design a Loyalty Program Customers Actually Finish
+URL: https://loyalties.marketing/resources/how-to-design-a-loyalty-program
+A practical guide to designing a loyalty program with the right stamp count, reward and joining flow for your customers.
+
+### Loyalties: The Digital Stamp Card Platform for Local Businesses
+URL: https://loyalties.marketing/resources/loyalties-platform
+Loyalties is a wallet-based stamp card platform built for local businesses. Here is how it works and what it costs.
+
+### Best Loyalty Programs for Barbershops (And How to Pick One)
+URL: https://loyalties.marketing/resources/best-loyalty-programs-for-barbershops
+Most barbershop clients leave without saying anything. A loyalty card gives you a reason to reach them before they drift to another shop.
+
+### Best Loyalty Apps for Cafes in Australia (2026 Guide)
+URL: https://loyalties.marketing/resources/best-loyalty-apps-for-cafes-australia
+A guide to the best wallet-based and app-based loyalty options for Australian cafes, with a side-by-side comparison.
+
+### Why App-Based Loyalty Programs Don't Work for Small Businesses
+URL: https://loyalties.marketing/resources/why-app-loyalty-programs-dont-work
+The main reason app-based loyalty programs fail for small businesses — and why the phone wallet is a better option.
+
+### Restaurant Loyalty Programs That Actually Drive Sales
+URL: https://loyalties.marketing/resources/restaurant-loyalty-programs-that-drive-sales
+Restaurants need a loyalty program that suits less frequent visits. Here are four reward structures that work.
+
+### How to Run a Rewards Program for Your Nail Salon
+URL: https://loyalties.marketing/resources/rewards-program-for-nail-salons
+How to run a rewards program that keeps nail salon clients rebooking, from reward ideas to the exact setup in Loyalties.
+
+### How Much Revenue Can a Loyalty Program Make? A Simple Way to Estimate It
+URL: https://loyalties.marketing/resources/how-much-revenue-can-a-loyalty-program-make
+A simple formula to estimate how much extra revenue a loyalty program could generate at your venue.
+
+### Benefits of a Rewards Program for Bakery Customers (and for the Bakery)
+URL: https://loyalties.marketing/resources/benefits-of-rewards-program-for-bakery-customers
+What bakery customers gain from a rewards program — and what it does for the bakery in return.
+
+### The Benefits of a Loyalty Program for Bars
+URL: https://loyalties.marketing/resources/benefits-of-loyalty-program-for-bars
+The practical benefits of adding a loyalty program to your bar, from filling quiet nights to remembering regulars.
+
+### What Is a Good Loyalty App for Hairdressers?
+URL: https://loyalties.marketing/resources/good-loyalty-app-for-hairdressers
+What hairdressers need from a loyalty app, and how to pick one that improves rebooking without complicating the front desk.
+
+### How Do I Attract Customers to My Clothing Store?
+URL: https://loyalties.marketing/resources/attract-customers-to-clothing-store
+Seven practical tactics to bring more customers into your clothing store and turn first-time buyers into regulars.
+
+### What Is a Good Free Loyalty Card App for Small Businesses?
+URL: https://loyalties.marketing/resources/free-loyalty-card-app-small-business
+What the free tier of a loyalty card app actually includes — and when it makes sense to upgrade.
+
+### How to Increase Sales at a Cafe: 7 Tactics That Work
+URL: https://loyalties.marketing/resources/increase-sales-at-a-cafe
+Seven tactics that lift cafe sales, from bundle pricing to an email list of opted-in regulars.
+
+### How to Attract More Customers to a Landscaping Business
+URL: https://loyalties.marketing/resources/attract-customers-landscaping-business
+How to keep past landscaping and trade clients close and turn one-off jobs into repeat work.
+
+### What Is the Most Popular Loyalty Program? (And What Small Businesses Can Learn)
+URL: https://loyalties.marketing/resources/most-popular-loyalty-program
+What the most popular loyalty programs have in common — and which lessons actually apply to a local business.
+
+### What Is the Best Loyalty Card App? How to Choose for Your Business
+URL: https://loyalties.marketing/resources/best-loyalty-card-app
+There is no single best loyalty card app. Here is the framework to find the right one for your business.
+
+### Best Loyalty Programs for Cafes: How to Pick One Your Regulars Will Use
+URL: https://loyalties.marketing/resources/best-loyalty-programs-for-cafes
+The four types of cafe loyalty program compared, and what makes one work at the counter on a busy Monday morning.
+
+### How Do I Attract Customers to My Cafe? A Practical Local Guide
+URL: https://loyalties.marketing/resources/attract-customers-to-your-cafe
+How to get found, give people a reason to try you, and turn a first visit into a habit.
+
+### The Benefits of a Loyalty Program for Cafes (For Owners and Customers)
+URL: https://loyalties.marketing/resources/benefits-of-loyalty-program-for-cafes
+Five ways a loyalty program helps a cafe owner, and what customers quietly get out of it too.
+
+### Best Loyalty Programs for Restaurants: What to Look For and What to Avoid
+URL: https://loyalties.marketing/resources/best-loyalty-programs-for-restaurants
+How to choose a loyalty program suited to less frequent dining visits, and which questions to ask every vendor.
+
+### How to Increase Sales at a Restaurant: 8 Ideas That Work Without Heavy Discounting
+URL: https://loyalties.marketing/resources/increase-sales-at-a-restaurant
+Eight restaurant sales ideas that protect your margins — from menu design to a guest email list you actually own.
+
+### How to Set Up a Rewards Program for Your Restaurant, Step by Step
+URL: https://loyalties.marketing/resources/rewards-program-for-restaurants
+Seven steps to launch a restaurant rewards program, from choosing the goal to reviewing the dashboard after 30 days.
+
+### Best Loyalty Programs for Bars and Pubs (Without Encouraging Overdrinking)
+URL: https://loyalties.marketing/resources/best-loyalty-programs-for-bars
+What a bar needs from a loyalty program — speed, no app required, and a reward that keeps you on the right side of your liquor licence.
+
+### How to Attract More Customers to Your Bar: Ideas Beyond Happy Hour
+URL: https://loyalties.marketing/resources/attract-more-customers-to-a-bar
+How to decide who you want, make yourself easy to find, and turn a one-off night out into a regular habit.
+
+### How to Run a Rewards Program for Your Bar
+URL: https://loyalties.marketing/resources/rewards-program-for-bars
+How to set the rules, train the team and run a bar rewards program that is fast, responsible and worth coming back for.
+
+### Best Loyalty Programs for Bakeries: Keep Your Weekly Regulars
+URL: https://loyalties.marketing/resources/best-loyalty-programs-for-bakeries
+A bakery runs on routine. Here is how to choose a loyalty program that rewards that routine without slowing the queue.
+
+### How to Increase Sales at a Bakery: Simple Ideas for Every Part of the Day
+URL: https://loyalties.marketing/resources/increase-sales-at-a-bakery
+How to find your weak part of the day, reduce waste and use loyalty to connect the ideas that work.
+
+### What Is a Good Loyalty App for Bakeries?
+URL: https://loyalties.marketing/resources/good-loyalty-app-for-bakeries
+A checklist to find a loyalty app that works at the speed of the queue, looks like your shop and covers both weekly regulars and occasional buyers.

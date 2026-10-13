@@ -1,0 +1,555 @@
+/* ═══════════════════════════════════════════════════════════════
+   LoyaltyCardShowcase.module.css
+   Responsive iPhone 15 & Apple Wallet Mockups
+   Uses container query inline-size (cqi) relative to phone width.
+   Formula: cqi = (px / 260) × 100
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Dark Section (Homepage) ─────────────────────────────────── */
+
+.sectionDark {
+  background: #0A0A0A;
+  padding: 96px 0 88px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHead {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  color: #FFFFFF;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  margin: 0 0 10px;
+}
+
+.sectionSub {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+/* ─── Wallet Integration Row (Inside Dark Section) ───────────── */
+
+.walletIntegrationRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 0 auto 36px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 9999px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.walletRowLabel {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.walletRowBadges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 680px) {
+  .walletIntegrationRow {
+    flex-direction: column;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .walletRowLabel {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .walletRowBadges {
+    width: 100%;
+  }
+}
+
+/* ─── Apple / Google Badges ───────────────────────────────────── */
+
+.walletBadgeBtn {
+  display: inline-flex;
+  transition: opacity 0.15s, transform 0.12s;
+  height: 48px;
+}
+.walletBadgeBtn:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.walletBadgeImg {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* ─── Industry Tabs ───────────────────────────────────────────── */
+
+.tabsScroll {
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 40px;
+  scrollbar-width: none;
+}
+.tabsScroll::-webkit-scrollbar { display: none; }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+  margin-inline: auto;
+  padding: 0 4px;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.14s ease;
+}
+.tab:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+}
+.tabActive {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border-color: transparent !important;
+  font-weight: 600;
+}
+
+/* ─── Phone Mockups Grid / Track ──────────────────────────────── */
+
+.phoneTrack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile-specific: exactly 2 items side-by-side */
+@media (max-width: 680px) {
+  .phoneTrack {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    overflow-x: visible;
+    gap: 12px;
+    padding: 0;
+  }
+  .phoneTrack::-webkit-scrollbar { display: none; }
+  
+  .phoneSlot:nth-child(3) {
+    display: none;
+  }
+}
+
+.phoneSlot {
+  container-type: inline-size;
+  width: 100%;
+}
+
+/* ─── Realistic iPhone Chassis ────────────────────────────────── */
+/* Base reference width: 260px.
+   Aspect ratio 260 / 415 displays the full card + complete QR code! */
+.phoneChassis {
+  width: 100%;
+  aspect-ratio: 260 / 415;
+  background: #111215;
+  border-radius: 13.8cqi 13.8cqi 0 0;        /* 36 / 260 */
+  padding: 3.46cqi 3.46cqi 0;              /* 9 / 260 */
+  box-sizing: border-box;
+  position: relative;
+  box-shadow:
+    inset 0 0 0 0.38cqi rgba(255, 255, 255, 0.15),
+    inset 0 0 0 0.8cqi #000000,
+    0 0 0 0.38cqi #2D2E33,
+    0 16cqi 36cqi rgba(0, 0, 0, 0.6);
+  -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+}
+
+/* ─── Screen ──────────────────────────────────────────────────── */
+
+.screen {
+  border-radius: 10.7cqi 10.7cqi 0 0;        /* 28 / 260 */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  padding-top: 15cqi; /* More black space at the top */
+}
+
+/* ─── Wallet Card Inside Phone Screen ─────────────────────────── */
+
+.walletCard {
+  margin: 0 5.5cqi 9cqi; /* more black bezel; card ends sooner so bottom edge shows */
+  padding: 3cqi 4.6cqi 2.5cqi;
+  border-radius: 5cqi; /* full rounded corners — all 4 sides, matching real wallet card */
+  display: flex;
+  flex-direction: column;
+  flex: none;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 12;
+  overflow: hidden;
+  /* Keep card height stable when QR shrinks */
+  min-height: 78cqi;
+}
+
+/* ─── Card Body ───────────────────────────── */
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44cqi;                  /* 114 / 260 */
+  height: 7.3cqi;                /* 19 / 260 */
+  background: #000000;
+  border-radius: 0 0 3.8cqi 3.8cqi;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.notchSpeaker {
+  width: 13cqi;
+  height: 0.85cqi;
+  background: #1A1A1C;
+  border-radius: 0.5cqi;
+  margin: 1.4cqi auto 0;
+}
+
+.notchCamera {
+  width: 2.2cqi;
+  height: 2.2cqi;
+  background: #0D121D;
+  border-radius: 50%;
+  position: absolute;
+  right: 5cqi;
+  top: 2.2cqi;
+}
+
+/* ─── Status Bar (Wraps around notch in the ears) ─────────────── */
+
+.statusBar {
+  position: absolute;
+  top: 1.5cqi; /* Higher up to leave room for the card */
+  left: 0;
+  right: 0;
+  height: 7.3cqi;
+  padding: 0 5.4cqi 0 6.2cqi;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 11;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.statusTime {
+  font-size: 4.2cqi;             /* ~11px */
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  line-height: 1;
+}
+
+.statusIcons {
+  display: flex;
+  align-items: center;
+  gap: 1.5cqi;
+}
+
+.signalIcon,
+.wifiIcon {
+  width: 4.8cqi;
+  height: 3.6cqi;
+  display: block;
+}
+
+.batteryIcon {
+  width: 6.8cqi;
+  height: 3.6cqi;
+  display: block;
+}
+
+/* ─── Authentic Notch ─────────────────────────────────────────── */
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2cqi;
+  margin-bottom: 5cqi; /* Tighter gap between header and stamps */
+}
+
+.brandGroup {
+  display: flex;
+  align-items: center;
+  gap: 2.7cqi;
+  min-width: 0;
+}
+
+.logoBadge {
+  width: 11.5cqi;                /* 30 / 260 */
+  height: 11.5cqi;
+  border-radius: 50%;
+  border: 0.38cqi solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brandLogoSvg {
+  width: 7cqi;
+  height: 7cqi;
+  display: block;
+}
+
+.brandTitle {
+  font-size: 4.2cqi;             /* ~11px — same as member / reward text */
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
+
+.memberGroup {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.memberTag {
+  font-size: 2.5cqi;             /* ~6.5px */
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.4cqi;
+}
+
+.memberName {
+  font-size: 4.2cqi;             /* ~11px */
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  display: block;
+  line-height: 1;
+}
+
+/* ─── Stamp Grid ──────────────────────────────────────────────── */
+
+.stampGrid {
+  display: grid;
+  gap: 2.8cqi;
+  width: 100%;
+  padding: 0 2cqi;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  /* Always reserve ~2 rows so 4-stamp layouts keep the same card rhythm */
+  min-height: 36cqi;
+  align-content: start;
+  justify-content: center; /* center 4-in-a-row / 5-in-a-row */
+}
+
+.stampFilled,
+.stampEmpty {
+  width: var(--stamp-size, 13.5cqi);
+  height: var(--stamp-size, 13.5cqi);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Extra breathing room when showing 10 stamps (2×5) */
+/* 5-across layouts (5 or 10 stamps) — slightly smaller + more padding */
+.stampGridCompact {
+  gap: 2cqi;
+  padding: 0 3.5cqi;
+}
+
+.stampGridCompact .stampSvg {
+  width: 6.2cqi;
+  height: 6.2cqi;
+}
+
+.stampEmpty {
+  border: 0.58cqi solid;
+  background: transparent;
+}
+
+.stampSvg {
+  width: 7.48cqi; /* Increased by 10% from 6.8cqi */
+  height: 7.48cqi;
+  display: block;
+}
+
+.freeText {
+  font-size: 3.4cqi;             /* ~9px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ─── Stats Row (Stamps / Reward) ─────────────────────────────── */
+
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 1cqi;
+  margin-top: 3.5cqi; /* more space from stamps */
+}
+
+.statTag {
+  font-size: 2.5cqi;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.8cqi;
+}
+
+.statVal {
+  font-size: 4.2cqi;             /* match member name size / weight */
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  display: block;
+  line-height: 1;
+}
+
+.statRight {
+  text-align: right;
+}
+
+/* ─── Complete Vector QR Code ─────────────────────────────────── */
+
+.qrContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1cqi;
+  margin-top: auto; /* sit toward bottom; card min-height keeps overall height */
+  margin-bottom: 0;
+  padding-top: 5cqi; /* more space from STAMPS / REWARD text */
+}
+
+.qrCard {
+  background: #FFFFFF;
+  border-radius: 2cqi;
+  /* ~10% padding around the QR modules */
+  padding: 2.7cqi;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.qrGraphic {
+  /* another ~10% smaller */
+  width: 27.5cqi;
+  height: 27.5cqi;
+  display: block;
+  shape-rendering: crispEdges;
+}
+
+.qrLabel {
+  font-size: 2.8cqi;
+  font-family: 'SF Mono', Consolas, Monaco, monospace;
+  letter-spacing: 0.09em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* ─── CTA Button ──────────────────────────────────────────────── */
+
+.sectionCta {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 36px;
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  transition: opacity 0.14s;
+}
+.ctaBtn:hover { opacity: 0.88; }
+
+/* ─── Embed Mode (Blog Posts) ─────────────────────────────────── */
+
+.embedWrap {
+  margin: 40px 0;
+  background: transparent;
+}
+
+.embedNote {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  text-align: center;
+  margin: 0 0 20px;
+}
+

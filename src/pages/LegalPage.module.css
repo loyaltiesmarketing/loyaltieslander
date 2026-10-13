@@ -1,0 +1,389 @@
+.shell {
+  position: relative;
+}
+
+.page {
+  padding: 4rem 0 5.5rem;
+}
+
+.layout {
+  display: grid;
+  gap: 2rem;
+  padding: 3rem 0 6rem;
+  max-width: min(100% - 2.5rem, 1136px);
+}
+
+.sidebar {
+  display: none;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 1.35rem;
+  font-size: 0.875rem;
+  color: var(--brand-body-gray);
+}
+
+.backLink:hover {
+  color: var(--ink);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mobileBack {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0;
+  font-size: 0.875rem;
+  color: var(--brand-body-gray);
+  background: transparent;
+}
+
+.mobileBack:hover {
+  color: var(--ink);
+}
+
+.mobileToc {
+  display: block;
+  border: 1px solid var(--ink-10);
+  border-radius: 14px;
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.tocToggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+
+.chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--ink);
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.tocPanel {
+  padding: 0.5rem 0.65rem 1rem;
+  border-top: 1px solid var(--ink-5);
+}
+
+.tocTitle {
+  margin: 0 0 1rem;
+  font-size: 0.8125rem;
+  color: var(--brand-muted-gray);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.tocList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.navMenu {
+  display: block;
+}
+
+.tocLink {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  font: inherit;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--brand-body-gray);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.15s ease;
+}
+
+.tocChild {
+  padding-left: 1.35rem;
+  font-size: 0.8125rem;
+  color: var(--brand-muted-gray);
+}
+
+.tocLink:hover {
+  color: var(--ink);
+  background: var(--surface-soft);
+}
+
+/* Active section: shaded fill (no outline) */
+.tocActive {
+  color: var(--ink);
+  background: var(--brand-chip-gray);
+}
+
+.article {
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: var(--brand-muted-gray);
+}
+
+.eyebrow a {
+  color: var(--brand-muted-gray);
+}
+
+.eyebrow a:hover {
+  color: var(--ink);
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.lede {
+  margin: 0 0 1.75rem;
+  font-size: 1.0625rem;
+  color: var(--brand-body-gray);
+  line-height: 1.6;
+}
+
+.prose {
+  color: var(--brand-body-gray);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.preamble {
+  margin-bottom: 1.5rem;
+}
+
+/* Section scroll targets — padding (not heading margin) so IO hits a real box */
+.scrollSection {
+  scroll-margin-top: 7.5rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ink-5);
+}
+
+.scrollSection:last-of-type {
+  border-bottom: none;
+}
+
+.prose :is(h1, h2, h3) {
+  color: var(--ink);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  scroll-margin-top: 7.5rem;
+}
+
+.docTitle {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+}
+
+.section {
+  margin: 0 0 1.1rem;
+  font-size: 1.3rem;
+}
+
+.subsection {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  scroll-margin-top: 7.5rem;
+}
+
+.prose h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+.prose p {
+  margin: 0 0 1.25rem;
+}
+
+.prose em {
+  color: var(--brand-muted-gray);
+  font-style: normal;
+}
+
+.prose ul,
+.prose ol {
+  margin: 0 0 1.35rem;
+  padding-left: 1.35rem;
+}
+
+.prose li {
+  margin: 0.5rem 0;
+}
+
+.prose li + li {
+  margin-top: 0.55rem;
+}
+
+.prose strong {
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.prose a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1.75rem;
+  font-size: 0.9375rem;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid var(--ink-10);
+  padding: 0.85rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th {
+  background: var(--surface-soft);
+  color: var(--ink);
+  font-weight: 400;
+}
+
+.other {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ink-5);
+}
+
+.otherLabel {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: var(--brand-muted-gray);
+}
+
+.navList {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.navList a {
+  font-size: 0.9375rem;
+  color: var(--brand-body-gray);
+}
+
+.navList a:hover {
+  color: var(--ink);
+}
+
+.back {
+  display: inline-block;
+  font-size: 0.9375rem;
+  color: var(--brand-body-gray);
+}
+
+.back:hover {
+  color: var(--ink);
+}
+
+.backToTop {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns: 260px minmax(0, 1fr);
+    align-items: start;
+    gap: 4rem;
+    padding-top: 4rem;
+  }
+
+  .sidebar {
+    display: block;
+    position: sticky;
+    top: calc(var(--header-height) + 1.5rem);
+    max-height: calc(100vh - var(--header-height) - 2.5rem);
+    overflow: auto;
+    padding-right: 0.75rem;
+  }
+
+  .mobileNav {
+    display: none;
+  }
+}
+
+@media (max-width: 899px) and (orientation: portrait) {
+  .backToTop {
+    position: fixed;
+    right: 1rem;
+    bottom: 1.25rem;
+    z-index: 40;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 1.1rem;
+    border: none;
+    border-radius: var(--radius-pill);
+    background: var(--ink);
+    color: #fff;
+    font: inherit;
+    font-size: 0.875rem;
+    box-shadow: var(--shadow-float);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .backToTopVisible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backToTop {
+    transition: none;
+  }
+}

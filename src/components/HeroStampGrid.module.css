@@ -1,0 +1,193 @@
+.hero {
+  padding: 2.5rem 0 3.5rem;
+  background: var(--surface);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.stampStage {
+  position: relative;
+  width: min(100%, 504px);
+  aspect-ratio: 2 / 3;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: clamp(0.85rem, 3vw, 1.2rem);
+}
+
+.stampWindow {
+  position: relative;
+  place-self: center;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  max-height: 100%;
+  border-radius: var(--radius-pill);
+  animation: stampIn 0.55s ease both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stampClip {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  background: #111;
+}
+
+.stampMedia {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+.stampLabel {
+  position: relative;
+  z-index: 1;
+  max-width: 82%;
+  text-align: center;
+  font-size: clamp(1.05rem, 4.5vw, 1.35rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #fff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  user-select: none;
+}
+
+.signUp {
+  place-self: center;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #fff;
+  box-shadow: var(--shadow-float);
+  animation: stampIn 0.55s ease both;
+  transition: background 0.2s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.signUpMark {
+  position: absolute;
+  width: 94.5%;
+  height: 94.5%;
+  object-fit: contain;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.signUpText {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(0.95rem, 2.8vw, 1.125rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.signUp:hover {
+  background: #2a2a2a;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.copy {
+  text-align: center;
+  max-width: 36rem;
+}
+
+.headline {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.support {
+  margin: 0;
+  font-size: clamp(1rem, 2.2vw, 1.1875rem);
+  color: var(--brand-body-gray);
+  line-height: 1.45;
+}
+
+@keyframes stampIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 3.5rem 0 4.5rem;
+  }
+
+  .inner {
+    gap: 3rem;
+  }
+
+  .stampStage {
+    width: min(100%, 920px);
+    aspect-ratio: 2 / 1;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: clamp(0.55rem, 1.2vw, 0.85rem);
+  }
+
+  .stampLabel {
+    font-size: clamp(1.2rem, 1.7vw, 1.55rem);
+  }
+
+  .signUpText {
+    font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stampWindow,
+  .signUp {
+    animation: none;
+  }
+
+  .signUp:hover {
+    transform: none;
+  }
+}

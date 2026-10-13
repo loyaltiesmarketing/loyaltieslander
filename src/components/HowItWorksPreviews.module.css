@@ -1,0 +1,455 @@
+.frame {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+}
+
+.chrome {
+  background: #f3f3f3;
+  padding: 0.4rem 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+  border-bottom: 1px solid #e8e8e8;
+  flex-shrink: 0;
+}
+
+.dotR, .dotY, .dotG {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.dotR { background: #ff5f57; }
+.dotY { background: #febc2e; }
+.dotG { background: #28c840; }
+
+.chromeTitle {
+  font-size: 0.58rem;
+  color: #999;
+  margin-left: 0.25rem;
+  font-weight: 500;
+}
+
+/* ── Config ───────────────────────────────────────────── */
+.configBody {
+  padding: 0.65rem 0.7rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fafafa;
+  flex: 1;
+}
+
+.block { min-width: 0; }
+
+.label {
+  margin: 0 0 0.18rem;
+  font-size: 0.55rem;
+  color: #afafaf;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.uploadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.55rem;
+  background: #111;
+  color: #fff;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.field {
+  background: #f3f3f3;
+  border-radius: 6px;
+  padding: 0.32rem 0.45rem;
+  font-size: 0.625rem;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.colorRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.swatchField {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f3f3f3;
+  border-radius: 6px;
+  padding: 0.22rem 0.35rem;
+}
+
+.swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.swatchHex {
+  font-size: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: #555;
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 3px;
+}
+
+.iconCell,
+.iconActive {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  color: #555;
+}
+
+.iconCell svg,
+.iconActive svg {
+  width: 16px;
+  height: 16px;
+}
+
+.iconActive {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.tabs {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.3rem;
+  background: #fff;
+}
+
+.tabOn,
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 0.25rem 0;
+  font-size: 0.55rem;
+  font-weight: 500;
+}
+
+.tabOn {
+  background: #111;
+  color: #fff;
+}
+
+.tab {
+  color: #888;
+}
+
+/* ── Card 2: Join Page ───────────────────────────────────────────── */
+.joinBody {
+  background: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.5rem 1rem;
+}
+
+.joinLogo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.joinName {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: #111;
+}
+
+.joinSub {
+  font-size: 0.65rem;
+  color: #666;
+  margin: 0 0 1.25rem;
+}
+
+.authStack {
+  width: 100%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.btnApple,
+.btnOutline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.45rem;
+  border-radius: 99px;
+  font-size: 0.58rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+.btnApple {
+  background: #111;
+  color: #fff;
+}
+
+.btnOutline {
+  background: #fff;
+  color: #111;
+  border: 1px solid #dcdcdc;
+}
+
+.authIcon {
+  width: 13px;
+  height: 13px;
+}
+
+.consent {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.45rem;
+  color: #666;
+  margin-bottom: 1.75rem;
+  max-width: 220px;
+  width: 100%;
+}
+
+.checkbox {
+  width: 10px;
+  height: 10px;
+  background: #111;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkbox::after {
+  content: '';
+  width: 3px;
+  height: 5px;
+  border: solid #fff;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+  margin-bottom: 1px;
+}
+
+.joinLegal {
+  font-size: 0.45rem;
+  color: #aaa;
+  margin: auto 0 0.35rem;
+}
+
+.joinLegal span {
+  text-decoration: underline;
+}
+
+.powered {
+  font-size: 0.45rem;
+  color: #ccc;
+  margin: 0;
+}
+
+/* ── Card 3: Email Preview ───────────────────────────────────────────── */
+.emailChrome {
+  background: #fff;
+  padding: 0.55rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.emailChromeTitle {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.themeToggle {
+  display: flex;
+  background: #f3f3f3;
+  border-radius: 99px;
+  padding: 0.15rem;
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: #888;
+}
+
+.themeToggleActive {
+  background: #fff;
+  color: #111;
+  padding: 0.15rem 0.4rem;
+  border-radius: 99px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.themeToggle span:not(.themeToggleActive) {
+  padding: 0.15rem 0.4rem;
+}
+
+.emailMeta {
+  padding: 0.6rem 0.75rem;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.55rem;
+}
+
+.metaLabel {
+  color: #999;
+  width: 35px;
+}
+
+.metaValue {
+  color: #111;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emailCanvas {
+  background: #f3f3f3;
+  flex: 1;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.emailCard {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.emailBrand {
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.emailHero {
+  width: 100%;
+  height: 80px;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.emailHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.emailBody {
+  padding: 1rem 1rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.emailBody h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.emailBody p {
+  margin: 0 0 0.8rem;
+  font-size: 0.55rem;
+  color: #666;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.emailOfferBox {
+  background: #f9f9f9;
+  width: 100%;
+  padding: 0.65rem;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.emailButton {
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  width: 80%;
+}

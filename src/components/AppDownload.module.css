@@ -1,0 +1,57 @@
+.section {
+  padding: 4.5rem 0 5rem;
+  background: var(--surface);
+}
+
+.inner {
+  max-width: 40rem;
+}
+
+.heading {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.support {
+  margin: 0 0 1.75rem;
+  font-size: 1.0625rem;
+  color: var(--brand-body-gray);
+  line-height: 1.5;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.badge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 10.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 12px;
+  background: var(--ink);
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.badge:hover {
+  opacity: 0.88;
+}
+
+.badgeEyebrow {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.2;
+}
+
+.badgeStore {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}

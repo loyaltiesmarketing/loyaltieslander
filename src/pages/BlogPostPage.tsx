@@ -3,30 +3,10 @@ import { Link, useParams } from 'react-router-dom'
 import { APP_URL } from '../data/site'
 import { blogPosts, displayTagForPost, inlineImagesForPost, thumbnailFileForPost, type BlogEmbed, type BlogInlineImage, type BlogPost } from '../data/blog'
 import { publicAssetUrl } from '../lib/assets'
+import { SITE_DESCRIPTION, SITE_TITLE, usePageMeta } from '../lib/usePageMeta'
 import { RoiCalculator, ShareBar } from '../components/components'
 import { LoyaltyCardShowcase } from '../components/LoyaltyCardShowcase'
 import styles from './BlogPostPage.module.css'
-
-const DEFAULT_TITLE = 'Loyalties'
-const DEFAULT_DESCRIPTION =
-  'Loyalties — the loyalty card your customers actually want to fill. Tap to join, tap to earn, no app required.'
-
-function usePageMeta(title: string, description: string) {
-  useEffect(() => {
-    document.title = title
-    let meta = document.querySelector('meta[name="description"]')
-    if (!meta) {
-      meta = document.createElement('meta')
-      meta.setAttribute('name', 'description')
-      document.head.appendChild(meta)
-    }
-    meta.setAttribute('content', description)
-    return () => {
-      document.title = DEFAULT_TITLE
-      meta.setAttribute('content', DEFAULT_DESCRIPTION)
-    }
-  }, [title, description])
-}
 
 function InlineImage({ image }: { image: BlogInlineImage }) {
   return (
@@ -166,8 +146,8 @@ export function BlogPostPage() {
   const post = blogPosts.find((p) => p.slug === slug)
 
   usePageMeta(
-    post?.metaTitle ?? DEFAULT_TITLE,
-    post?.metaDescription ?? DEFAULT_DESCRIPTION,
+    post?.metaTitle ?? SITE_TITLE,
+    post?.metaDescription ?? SITE_DESCRIPTION,
   )
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { APP_URL, PRICING_COPY } from '../data/site'
+import { usePageMeta } from '../lib/usePageMeta'
 import styles from './PricingPage.module.css'
 
 const pricingAppUrl = `${APP_URL}?utm_source=site&utm_medium=pricing-page&utm_campaign=pricing`
@@ -17,6 +18,10 @@ function CellValue({ value }: { value: string | string[] }) {
 }
 
 export function PricingPage() {
+  usePageMeta(
+    'Pricing — Free and Pro loyalty cards | Loyalties',
+    'Start free with a wallet stamp card. Pro is $8 per week for email campaigns and multi-site location data.',
+  )
   const [free, pro] = PRICING_COPY.tiers
 
   return (

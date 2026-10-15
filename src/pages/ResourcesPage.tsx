@@ -10,6 +10,7 @@ import {
   type ResourceTagId,
 } from '../data/blog'
 import { publicAssetUrl } from '../lib/assets'
+import { usePageMeta } from '../lib/usePageMeta'
 import styles from './ResourcesPage.module.css'
 
 const POSTS_PER_PAGE = 10
@@ -31,6 +32,10 @@ function parseIndustry(
 }
 
 export function ResourcesPage() {
+  usePageMeta(
+    'Resources — Loyalty guides for local businesses | Loyalties',
+    'Guides and how-tos for cafes, restaurants, bars, bakeries and salons running a stamp card that customers actually finish.',
+  )
   const [searchParams, setSearchParams] = useSearchParams()
   const [query, setQuery] = useState('')
   const [page, setPage] = useState(1)

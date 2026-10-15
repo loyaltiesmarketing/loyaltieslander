@@ -10,6 +10,7 @@ import {
   type LegalSection,
   type TocItem,
 } from '../lib/legalToc'
+import { usePageMeta } from '../lib/usePageMeta'
 import styles from './LegalPage.module.css'
 
 export function LegalPage() {
@@ -35,6 +36,13 @@ export function LegalPage() {
         index,
       })),
     [sections],
+  )
+
+  usePageMeta(
+    page ? `${page.title} | Loyalties` : undefined,
+    page
+      ? `${page.title} for Loyalties Marketing, the digital stamp card platform for local businesses.`
+      : undefined,
   )
 
   useEffect(() => {

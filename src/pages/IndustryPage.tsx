@@ -13,6 +13,7 @@ import {
   industries,
 } from '../data/site'
 import { industryAssetUrl } from '../lib/assets'
+import { usePageMeta } from '../lib/usePageMeta'
 import styles from './IndustryPage.module.css'
 import { LoyaltyCardShowcase } from '../components/LoyaltyCardShowcase'
 import { HowItWorksPreviews } from '../components/HowItWorksPreviews'
@@ -75,6 +76,8 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 export function IndustryPage() {
   const { slug } = useParams()
   const industry = industries.find((item) => item.slug === slug)
+
+  usePageMeta(industry?.metaTitle, industry?.metaDescription)
 
   if (!industry) {
     return (

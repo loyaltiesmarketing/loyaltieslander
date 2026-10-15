@@ -1,6 +1,8 @@
 # Loyalties — Digital Stamp Card Platform for Local Businesses
-# https://loyalties.marketing
-# This file lists all resource articles for LLM indexing.
+
+Site: https://loyalties.marketing
+
+This file lists resource articles for LLM indexing. Loyalties is a wallet-based stamp card for local businesses. Customers add a branded card to Apple Wallet or Google Wallet. There is no app to download.
 
 ## Resources
 
@@ -100,9 +102,9 @@ Eight restaurant sales ideas that protect your margins — from menu design to a
 URL: https://loyalties.marketing/resources/rewards-program-for-restaurants
 Seven steps to launch a restaurant rewards program, from choosing the goal to reviewing the dashboard after 30 days.
 
-### Best Loyalty Programs for Bars and Pubs (Without Encouraging Overdrinking)
+### Best Loyalty Programs for Bars and Pubs
 URL: https://loyalties.marketing/resources/best-loyalty-programs-for-bars
-What a bar needs from a loyalty program — speed, no app required, and a reward that keeps you on the right side of your liquor licence.
+What a bar needs from a loyalty program — speed, no app required, and a reward built around food, snacks or a drink deal.
 
 ### How to Attract More Customers to Your Bar: Ideas Beyond Happy Hour
 URL: https://loyalties.marketing/resources/attract-more-customers-to-a-bar
@@ -110,7 +112,7 @@ How to decide who you want, make yourself easy to find, and turn a one-off night
 
 ### How to Run a Rewards Program for Your Bar
 URL: https://loyalties.marketing/resources/rewards-program-for-bars
-How to set the rules, train the team and run a bar rewards program that is fast, responsible and worth coming back for.
+How to set the rules, train the team and run a bar rewards program that is fast, food-friendly and worth coming back for.
 
 ### Best Loyalty Programs for Bakeries: Keep Your Weekly Regulars
 URL: https://loyalties.marketing/resources/best-loyalty-programs-for-bakeries

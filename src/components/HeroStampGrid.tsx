@@ -4,6 +4,7 @@ import { publicAssetUrl } from '../lib/assets'
 import styles from './HeroStampGrid.module.css'
 
 const HERO_VIDEO = publicAssetUrl('cosmos_1710149938 (1).mp4')
+const HERO_POSTER = '/hero-poster.jpg'
 
 type Stamp = { label?: string }
 
@@ -22,6 +23,7 @@ export function HeroStampGrid() {
   const [inView, setInView] = useState(false)
   const [isDesktop, setIsDesktop] = useState(false)
   const [offsets, setOffsets] = useState<Offset[]>([])
+  const [videoPlaying, setVideoPlaying] = useState(false)
 
   const stamps = isDesktop ? DESKTOP_STAMPS : MOBILE_STAMPS
 
@@ -78,24 +80,38 @@ export function HeroStampGrid() {
   }, [stamps, isDesktop])
 
   useEffect(() => {
+    setVideoPlaying(false)
+  }, [stamps.length, isDesktop])
+
+  useEffect(() => {
     if (!inView) return
     const videos = videoRefs.current.filter(Boolean) as HTMLVideoElement[]
     if (!videos.length) return
 
+    const primary = videos[0]
+
+    const markPlaying = () => setVideoPlaying(true)
+    primary.addEventListener('playing', markPlaying)
+
     const playAll = async () => {
       await Promise.all(
         videos.map(async (video) => {
+          video.muted = true
+          video.defaultMuted = true
+          video.playsInline = true
+          video.setAttribute('playsinline', '')
+          video.setAttribute('webkit-playsinline', 'true')
           try {
             await video.play()
+            setVideoPlaying(true)
           } catch {
-            /* Autoplay blocked */
+            /* Autoplay blocked — poster stays until play succeeds */
           }
         }),
       )
     }
     void playAll()
 
-    const primary = videos[0]
     const sync = () => {
       const t = primary.currentTime
       for (let i = 1; i < videos.length; i++) {
@@ -104,7 +120,10 @@ export function HeroStampGrid() {
       }
     }
     const id = window.setInterval(sync, 500)
-    return () => window.clearInterval(id)
+    return () => {
+      primary.removeEventListener('playing', markPlaying)
+      window.clearInterval(id)
+    }
   }, [inView, stamps.length])
 
   return (
@@ -139,17 +158,28 @@ export function HeroStampGrid() {
                       ref={(el) => {
                         videoRefs.current[i] = el
                       }}
-                      className={styles.stampMedia}
+                      className={`${styles.stampMedia} ${videoPlaying ? styles.stampMediaVisible : ''}`}
                       muted
                       loop
                       playsInline
                       autoPlay
+                      controls={false}
+                      disablePictureInPicture
                       preload={inView ? 'auto' : 'metadata'}
-                      poster="/hero-poster.jpg"
                       style={mediaStyle}
+                      aria-hidden
+                      tabIndex={-1}
                     >
                       <source src={HERO_VIDEO} type="video/mp4" />
                     </video>
+                    <img
+                      className={`${styles.stampPoster} ${videoPlaying ? styles.stampPosterHidden : ''}`}
+                      src={HERO_POSTER}
+                      alt=""
+                      aria-hidden
+                      draggable={false}
+                      style={mediaStyle}
+                    />
                     <div className={styles.shade} />
                   </div>
                   {stamp.label ? (

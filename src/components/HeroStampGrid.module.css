@@ -53,6 +53,36 @@
   max-width: none;
   object-fit: cover;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.stampMediaVisible {
+  opacity: 1;
+}
+
+.stampPoster {
+  position: absolute;
+  max-width: none;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.35s ease;
+}
+
+.stampPosterHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Hide Safari / iOS native play chrome if it ever appears under the poster */
+.stampMedia::-webkit-media-controls {
+  display: none !important;
+}
+
+.stampMedia::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
 }
 
 .shade {
@@ -60,6 +90,7 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.15);
   pointer-events: none;
+  z-index: 2;
 }
 
 .stampLabel {

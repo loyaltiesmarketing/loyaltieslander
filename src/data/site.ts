@@ -251,7 +251,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for restaurants | Loyalties',
     metaDescription:
       "Loyalties puts your restaurant's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for restaurants.',
+    hero: 'Turn one-time guests into regulars, automatically.',
     subtext: 'Guests add your card to their wallet. Staff scan it at payment.',
     problems: [
       {
@@ -325,7 +325,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for cafes | Loyalties',
     metaDescription:
       "Loyalties puts your cafe's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for cafes.',
+    hero: 'A loyalty system that runs in the background, so you can run your cafe.',
     subtext: 'Staff scan the pass at the counter. Customers never download an app.',
     problems: [
       {
@@ -398,7 +398,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for bars | Loyalties',
     metaDescription:
       "Loyalties puts your bar's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for bars.',
+    hero: 'Fill the room on purpose, automatically.',
     subtext: 'Staff scan the pass. That is the whole routine.',
     problems: [
       {
@@ -466,7 +466,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for bakeries | Loyalties',
     metaDescription:
       "Loyalties puts your bakery's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for bakeries.',
+    hero: "Tell regulars what is fresh, the moment it's out.",
     subtext: 'Staff scan the pass at the counter. Regulars earn the reward you set.',
     problems: [
       {
@@ -532,7 +532,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for hairdressers | Loyalties',
     metaDescription:
       "Loyalties puts your salon's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for hairdressers.',
+    hero: 'Fill gaps in your day, automatically.',
     subtext: 'Staff scan the pass at the front desk. It works beside your booking system.',
     problems: [
       {
@@ -598,7 +598,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for barbers | Loyalties',
     metaDescription:
       "Loyalties puts your barbershop's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for barbers.',
+    hero: 'Keep regulars in your chair, without lifting a finger.',
     subtext: 'Scan the pass at the chair, then back to the cut.',
     problems: [
       {
@@ -663,7 +663,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for nail techs | Loyalties',
     metaDescription:
       "Loyalties puts your nail studio's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for nail techs.',
+    hero: 'Show your work and fill open slots, automatically.',
     subtext: 'Staff scan the pass at checkout. Clients keep their progress in their wallet.',
     problems: [
       {
@@ -729,7 +729,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for clothing stores | Loyalties',
     metaDescription:
       "Loyalties puts your store's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for clothing stores.',
+    hero: 'Announce every drop directly to your best customers.',
     subtext: 'Staff scan the pass at the till. You decide what earns a stamp.',
     problems: [
       {
@@ -795,7 +795,7 @@ export const industries: Industry[] = [
     metaTitle: 'Digital stamp card for service businesses | Loyalties',
     metaDescription:
       "Loyalties puts your business's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
-    hero: 'Made for service businesses.',
+    hero: 'Stay top of mind between jobs, automatically.',
     subtext: 'Scan the pass when the job is done. Clients keep it between visits.',
     problems: [
       {

@@ -19,7 +19,6 @@ export function HeroStampGrid() {
   const stageRef = useRef<HTMLDivElement>(null)
   const clipRefs = useRef<(HTMLDivElement | null)[]>([])
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
-  const [reduceMotion, setReduceMotion] = useState(false)
   const [inView, setInView] = useState(false)
   const [isDesktop, setIsDesktop] = useState(false)
   const [offsets, setOffsets] = useState<Offset[]>([])
@@ -27,16 +26,11 @@ export function HeroStampGrid() {
   const stamps = isDesktop ? DESKTOP_STAMPS : MOBILE_STAMPS
 
   useEffect(() => {
-    const motionMq = window.matchMedia('(prefers-reduced-motion: reduce)')
     const desktopMq = window.matchMedia('(min-width: 768px)')
-    const updateMotion = () => setReduceMotion(motionMq.matches)
     const updateDesktop = () => setIsDesktop(desktopMq.matches)
-    updateMotion()
     updateDesktop()
-    motionMq.addEventListener('change', updateMotion)
     desktopMq.addEventListener('change', updateDesktop)
     return () => {
-      motionMq.removeEventListener('change', updateMotion)
       desktopMq.removeEventListener('change', updateDesktop)
     }
   }, [])
@@ -84,7 +78,7 @@ export function HeroStampGrid() {
   }, [stamps, isDesktop])
 
   useEffect(() => {
-    if (reduceMotion || !inView) return
+    if (!inView) return
     const videos = videoRefs.current.filter(Boolean) as HTMLVideoElement[]
     if (!videos.length) return
 
@@ -111,7 +105,7 @@ export function HeroStampGrid() {
     }
     const id = window.setInterval(sync, 500)
     return () => window.clearInterval(id)
-  }, [inView, reduceMotion, stamps.length])
+  }, [inView, stamps.length])
 
   return (
     <section className={styles.hero} ref={sectionRef} aria-labelledby="hero-heading">
@@ -141,29 +135,21 @@ export function HeroStampGrid() {
                       clipRefs.current[i] = el
                     }}
                   >
-                    {reduceMotion ? (
-                      <img
-                        className={styles.stampMedia}
-                        src="/hero-poster.jpg"
-                        alt=""
-                        style={mediaStyle}
-                      />
-                    ) : (
-                      <video
-                        ref={(el) => {
-                          videoRefs.current[i] = el
-                        }}
-                        className={styles.stampMedia}
-                        muted
-                        loop
-                        playsInline
-                        preload={inView ? 'auto' : 'none'}
-                        poster="/hero-poster.jpg"
-                        style={mediaStyle}
-                      >
-                        <source src={HERO_VIDEO} type="video/mp4" />
-                      </video>
-                    )}
+                    <video
+                      ref={(el) => {
+                        videoRefs.current[i] = el
+                      }}
+                      className={styles.stampMedia}
+                      muted
+                      loop
+                      playsInline
+                      autoPlay
+                      preload={inView ? 'auto' : 'metadata'}
+                      poster="/hero-poster.jpg"
+                      style={mediaStyle}
+                    >
+                      <source src={HERO_VIDEO} type="video/mp4" />
+                    </video>
                     <div className={styles.shade} />
                   </div>
                   {stamp.label ? (

@@ -169,9 +169,7 @@
   width: calc(10rem + 6.4rem);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .marqueeInner { animation: none; }
-}
+/* Keep the proof marquee scrolling on mobile even with Reduce Motion on. */
 
 /* ── Problems bento ──────────────────────────────────── */
 .problems {

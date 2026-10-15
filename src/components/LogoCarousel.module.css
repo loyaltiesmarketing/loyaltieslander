@@ -33,6 +33,7 @@
 
 .track {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 6rem;
   width: max-content;
@@ -79,13 +80,6 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .track {
-    animation: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: auto;
-    max-width: var(--container);
-    margin-inline: auto;
-  }
-}
+/* Keep the horizontal marquee even when the OS asks to reduce motion —
+   the old wrap fallback stacked logos vertically on mobile and looked broken.
+   Entrance/hover motion elsewhere still respects prefers-reduced-motion. */

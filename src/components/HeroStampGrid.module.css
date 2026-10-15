@@ -181,13 +181,3 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .stampWindow,
-  .signUp {
-    animation: none;
-  }
-
-  .signUp:hover {
-    transform: none;
-  }
-}

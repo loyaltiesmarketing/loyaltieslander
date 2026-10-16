@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { TicketForm } from '../components/TicketForm'
+import { usePageMeta } from '../lib/usePageMeta'
 import styles from './ContactPage.module.css'
 
 type Answer = {
@@ -102,6 +103,11 @@ function NavRow({
 }
 
 export function SupportTicketPage() {
+  usePageMeta(
+    'Submit a support ticket | Loyalties',
+    'Send a support ticket to the Loyalties team for account, billing or product help.',
+  )
+
   const [stepId, setStepId] = useState('who')
   const [history, setHistory] = useState<string[]>(['who'])
   const [category, setCategory] = useState<string | null>(null)
@@ -147,7 +153,7 @@ export function SupportTicketPage() {
   return (
     <div className={`container ${styles.page}`}>
       <p className={styles.eyebrow}>Help</p>
-      <h1 className={styles.title}>Submit a ticket</h1>
+      <h1 className={styles.title}>Submit a Loyalties support ticket</h1>
       <p className={styles.lede}>
         A few short questions, then send us a message. We’ll route it to the
         right place.

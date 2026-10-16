@@ -13,20 +13,32 @@ import {
 import { usePageMeta } from '../lib/usePageMeta'
 import styles from './LegalPage.module.css'
 
+function stripLeadingMarkdownH1(markdown: string) {
+  return markdown.replace(/^#\s+.+\n+/, '').trim()
+}
+
 export function LegalPage() {
   const { doc } = useParams()
   const page = getLegalDoc(doc)
+
+  usePageMeta(
+    page ? `${page.title} | Loyalties` : 'Legal page not found | Loyalties',
+    page
+      ? `${page.title} for Loyalties Marketing — policies for venues and members.`
+      : undefined,
+  )
   const [tocOpen, setTocOpen] = useState(false)
   const [showTop, setShowTop] = useState(false)
   const [activeId, setActiveId] = useState('')
 
-  const { preamble, sections } = useMemo(
-    () =>
-      page
-        ? splitLegalDocument(page.markdown)
-        : { preamble: '', sections: [] as LegalSection[] },
-    [page],
-  )
+  const { preamble, sections } = useMemo(() => {
+    if (!page) return { preamble: '', sections: [] as LegalSection[] }
+    const parts = splitLegalDocument(page.markdown)
+    return {
+      preamble: stripLeadingMarkdownH1(parts.preamble),
+      sections: parts.sections,
+    }
+  }, [page])
   const toc: TocItem[] = useMemo(
     () =>
       sections.map((section, index) => ({
@@ -36,13 +48,6 @@ export function LegalPage() {
         index,
       })),
     [sections],
-  )
-
-  usePageMeta(
-    page ? `${page.title} | Loyalties` : undefined,
-    page
-      ? `${page.title} for Loyalties Marketing, the digital stamp card platform for local businesses.`
-      : undefined,
   )
 
   useEffect(() => {
@@ -129,6 +134,7 @@ export function LegalPage() {
           <p className={styles.eyebrow}>
             <Link to="/legal">Legal</Link>
           </p>
+          <h1 className={styles.title}>{page.title}</h1>
 
           <div className={styles.prose}>
             {preamble ? (

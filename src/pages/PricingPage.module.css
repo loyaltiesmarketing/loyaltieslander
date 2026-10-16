@@ -16,6 +16,13 @@
   color: var(--ink);
 }
 
+.sub {
+  margin: 0.75rem 0 0;
+  font-size: 1.0625rem;
+  color: var(--brand-body-gray);
+  line-height: 1.5;
+}
+
 /* ── Plans ──────────────────────────────────────────── */
 .plans {
   padding: 2.75rem 0 2rem;

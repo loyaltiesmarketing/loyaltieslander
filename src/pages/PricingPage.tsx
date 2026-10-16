@@ -18,17 +18,19 @@ function CellValue({ value }: { value: string | string[] }) {
 }
 
 export function PricingPage() {
+  const [free, pro] = PRICING_COPY.tiers
+
   usePageMeta(
     'Pricing — Free and Pro loyalty cards | Loyalties',
-    'Start free with a wallet stamp card. Pro is $8 per week for email campaigns and multi-site location data.',
+    'Start free with a full stamp card for up to 100 active customers. Pro is $8 per week AUD for multi-site insights and email campaigns.',
   )
-  const [free, pro] = PRICING_COPY.tiers
 
   return (
     <main>
       <section className={styles.hero}>
         <div className={`container ${styles.heroInner}`}>
-          <h1 className={styles.heading}>{PRICING_COPY.heading}</h1>
+          <h1 className={styles.heading}>Loyalty card pricing for local businesses</h1>
+          <p className={styles.sub}>{PRICING_COPY.heading}</p>
         </div>
       </section>
 

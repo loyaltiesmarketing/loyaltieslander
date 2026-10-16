@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { TicketForm } from '../components/TicketForm'
+import { usePageMeta } from '../lib/usePageMeta'
 import styles from './ContactPage.module.css'
 
 type Answer = {
@@ -123,6 +124,11 @@ function NavRow({
 }
 
 export function AbusePage() {
+  usePageMeta(
+    'Report a concern | Loyalties',
+    'Report spam, privacy issues, misleading promotions or other concerns about a Loyalties program.',
+  )
+
   const [params] = useSearchParams()
   const campaignRef = params.get('campaign') || params.get('c') || undefined
 
@@ -171,7 +177,7 @@ export function AbusePage() {
   return (
     <div className={`container ${styles.page}`}>
       <p className={styles.eyebrow}>Safety</p>
-      <h1 className={styles.title}>Report a concern</h1>
+      <h1 className={styles.title}>Report a concern about a Loyalties program</h1>
       <p className={styles.lede}>
         Two quick questions, then a short form. You don’t need to be a member.
         Anonymous reports are allowed, but we can’t follow up without an email.

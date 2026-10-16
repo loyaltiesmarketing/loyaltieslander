@@ -34,8 +34,9 @@ function parseIndustry(
 export function ResourcesPage() {
   usePageMeta(
     'Resources — Loyalty guides for local businesses | Loyalties',
-    'Guides and how-tos for cafes, restaurants, bars, bakeries and salons running a stamp card that customers actually finish.',
+    'Guides, tips and how-tos for cafes, restaurants, bars, bakeries and other local businesses running a loyalty program.',
   )
+
   const [searchParams, setSearchParams] = useSearchParams()
   const [query, setQuery] = useState('')
   const [page, setPage] = useState(1)

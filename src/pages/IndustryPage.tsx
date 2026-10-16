@@ -77,7 +77,10 @@ export function IndustryPage() {
   const { slug } = useParams()
   const industry = industries.find((item) => item.slug === slug)
 
-  usePageMeta(industry?.metaTitle, industry?.metaDescription)
+  usePageMeta(
+    industry?.metaTitle ?? 'Industry not found | Loyalties',
+    industry?.metaDescription,
+  )
 
   if (!industry) {
     return (

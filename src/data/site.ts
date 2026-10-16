@@ -245,14 +245,15 @@ export const industries: Industry[] = [
   {
     slug: 'restaurants',
     name: 'Restaurants',
-    blurb: 'A reward card guests keep in their wallet.',
+    blurb: 'Invite past guests back.',
     accent: '#a53e49',
     assetKey: 'restaurant',
-    metaTitle: 'Digital stamp card for restaurants | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for restaurants | Loyalties',
     metaDescription:
-      "Loyalties puts your restaurant's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your restaurant's reward card in Apple Wallet and Google Wallet, then email the guests who opted in about new menus and quiet nights. Free to start.",
     hero: 'Turn one-time guests into regulars, automatically.',
-    subtext: 'Guests add your card to their wallet. Staff scan it at payment.',
+    subtext:
+      "Put a digital reward card in your customers' Apple or Google Wallet and keep your tables full.",
     problems: [
       {
         feature: 'wallet',
@@ -313,20 +314,21 @@ export const industries: Industry[] = [
           'It sits beside it. Loyalties does not take bookings or payments, but the page guests see after every stamp can link to your booking page.',
       },
     ],
-    ctaHeading: "Start your restaurant's card.",
-    cta: 'Start your card',
+    ctaHeading: 'Learn who dined. Invite them back.',
+    cta: 'Start for free',
   },
   {
     slug: 'cafes',
     name: 'Cafes',
-    blurb: 'Stamp cards in Apple Wallet and Google Wallet.',
+    blurb: 'Reach the regulars you already have.',
     accent: '#c4a574',
     assetKey: 'cafe',
-    metaTitle: 'Digital stamp card for cafes | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for cafes | Loyalties',
     metaDescription:
-      "Loyalties puts your cafe's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your cafe's stamp card in Apple Wallet and Google Wallet, then email the regulars who opted in about menus and offers. Free to start.",
     hero: 'A loyalty system that runs in the background, so you can run your cafe.',
-    subtext: 'Staff scan the pass at the counter. Customers never download an app.',
+    subtext:
+      "Loyalties puts a stamp card in your customers' phone wallets, then lets you automatically email the ones who opted in about your menu, your specials and your news.",
     problems: [
       {
         feature: 'wallet',
@@ -386,20 +388,21 @@ export const industries: Industry[] = [
         answer: 'Yes. Add each site as a location to see activity venue by venue.',
       },
     ],
-    ctaHeading: "Start your cafe's card.",
-    cta: 'Start your card',
+    ctaHeading: 'Know your regulars. Reach them.',
+    cta: 'Start for free',
   },
   {
     slug: 'bars',
     name: 'Bars',
-    blurb: 'A wallet card, stamped with one scan.',
+    blurb: 'Fill the room on purpose.',
     accent: '#1e293b',
     assetKey: 'bar',
-    metaTitle: 'Digital stamp card for bars | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for bars | Loyalties',
     metaDescription:
-      "Loyalties puts your bar's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your bar's stamp card in Apple Wallet and Google Wallet, then email the regulars who opted in about events and what's on. Free to start.",
     hero: 'Fill the room on purpose, automatically.',
-    subtext: 'Staff scan the pass. That is the whole routine.',
+    subtext:
+      "Put a digital reward card in your regulars' Apple or Google Wallet and give Tuesday a reason.",
     problems: [
       {
         feature: 'members',
@@ -454,20 +457,21 @@ export const industries: Industry[] = [
           'Nothing changes. The program runs on your account, and any staff member can open Scan pass on a phone or tablet.',
       },
     ],
-    ctaHeading: "Start your bar's card.",
-    cta: 'Start your card',
+    ctaHeading: 'Give Tuesday a reason.',
+    cta: 'Start for free',
   },
   {
     slug: 'bakeries',
     name: 'Bakeries',
-    blurb: 'Reward the weekly loaf, in their wallet.',
+    blurb: 'Tell regulars what is fresh.',
     accent: '#d97757',
     assetKey: 'bakery',
-    metaTitle: 'Digital stamp card for bakeries | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for bakeries | Loyalties',
     metaDescription:
-      "Loyalties puts your bakery's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your bakery's stamp card in Apple Wallet and Google Wallet, then email the regulars who opted in about limited batches and pre-orders. Free to start.",
     hero: "Tell regulars what is fresh, the moment it's out.",
-    subtext: 'Staff scan the pass at the counter. Regulars earn the reward you set.',
+    subtext:
+      "Put a digital stamp card in their wallet and announce limited batches instantly.",
     problems: [
       {
         feature: 'wallet',
@@ -520,20 +524,21 @@ export const industries: Industry[] = [
         answer: 'Pastry, donut and cake are there, along with other food and drink icons. You add your own logo and colours.',
       },
     ],
-    ctaHeading: "Start your bakery's card.",
-    cta: 'Start your card',
+    ctaHeading: "Tell your regulars it's out.",
+    cta: 'Start for free',
   },
   {
     slug: 'hairdressers',
     name: 'Hairdressers',
-    blurb: 'A stamp card that sits beside your bookings.',
+    blurb: 'Fill gaps in the day.',
     accent: '#e8b4b8',
     assetKey: 'hairdresser',
-    metaTitle: 'Digital stamp card for hairdressers | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for hairdressers | Loyalties',
     metaDescription:
-      "Loyalties puts your salon's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your salon's stamp card in Apple Wallet and Google Wallet, then email the clients who opted in about open slots and new services. Free to start.",
     hero: 'Fill gaps in your day, automatically.',
-    subtext: 'Staff scan the pass at the front desk. It works beside your booking system.',
+    subtext:
+      "Put a digital stamp card in every client's wallet and automatically email them about open slots and new services.",
     problems: [
       {
         feature: 'wallet',
@@ -586,20 +591,21 @@ export const industries: Industry[] = [
         answer: "The member list and the card belong to your salon's account, so the relationship stays with the business.",
       },
     ],
-    ctaHeading: "Start your salon's card.",
-    cta: 'Start your card',
+    ctaHeading: "Fill the chair before it's empty.",
+    cta: 'Start for free',
   },
   {
     slug: 'barbers',
     name: 'Barbers',
-    blurb: 'Stamp at the chair with one scan.',
+    blurb: 'Keep regulars in your chair.',
     accent: '#475569',
     assetKey: 'barber',
-    metaTitle: 'Digital stamp card for barbers | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for barbers | Loyalties',
     metaDescription:
-      "Loyalties puts your barbershop's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your barbershop's stamp card in Apple Wallet and Google Wallet, then email the clients who opted in about guest barbers and new products. Free to start.",
     hero: 'Keep regulars in your chair, without lifting a finger.',
-    subtext: 'Scan the pass at the chair, then back to the cut.',
+    subtext:
+      "Put a digital stamp card in every client's wallet and email them about guest barbers and open slots.",
     problems: [
       {
         feature: 'scan',
@@ -651,20 +657,21 @@ export const industries: Industry[] = [
         answer: "Yes. Staff can open Scan pass on any phone or tablet to scan a client's pass.",
       },
     ],
-    ctaHeading: "Start your barbershop's card.",
-    cta: 'Start your card',
+    ctaHeading: 'Keep them in your chair.',
+    cta: 'Start for free',
   },
   {
     slug: 'nail-techs',
     name: 'Nail techs',
-    blurb: 'Show your work after every stamp.',
+    blurb: 'Show your work between visits.',
     accent: '#d4a5a5',
     assetKey: 'nail',
-    metaTitle: 'Digital stamp card for nail techs | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for nail techs | Loyalties',
     metaDescription:
-      "Loyalties puts your nail studio's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your nail studio's stamp card in Apple Wallet and Google Wallet, then show the clients who opted in your latest sets and open slots. Free to start.",
     hero: 'Show your work and fill open slots, automatically.',
-    subtext: 'Staff scan the pass at checkout. Clients keep their progress in their wallet.',
+    subtext:
+      "Put a stamp card in every client's wallet and show them your latest sets and availability.",
     problems: [
       {
         feature: 'page',
@@ -717,20 +724,21 @@ export const industries: Industry[] = [
         answer: 'The card works in Google Wallet on Android and in Apple Wallet on iPhone.',
       },
     ],
-    ctaHeading: "Start your studio's card.",
-    cta: 'Start your card',
+    ctaHeading: "Show them what's new.",
+    cta: 'Start for free',
   },
   {
     slug: 'clothing',
     name: 'Clothing stores',
-    blurb: 'Announce new stock to opted-in members.',
+    blurb: 'Announce every drop.',
     accent: '#52525b',
     assetKey: 'retail',
-    metaTitle: 'Digital stamp card for clothing stores | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for clothing stores | Loyalties',
     metaDescription:
-      "Loyalties puts your store's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your store's reward card in Apple Wallet and Google Wallet, then email the shoppers who opted in the moment new stock lands. Free to start.",
     hero: 'Announce every drop directly to your best customers.',
-    subtext: 'Staff scan the pass at the till. You decide what earns a stamp.',
+    subtext:
+      "Put a digital reward card in every shopper's wallet and email them the moment new stock lands.",
     problems: [
       {
         feature: 'wallet',
@@ -783,20 +791,21 @@ export const industries: Industry[] = [
         answer: 'No. A stamp card reward can be a free item, a percentage off or a custom reward.',
       },
     ],
-    ctaHeading: "Start your store's card.",
-    cta: 'Start your card',
+    ctaHeading: 'Tell them what just landed.',
+    cta: 'Start for free',
   },
   {
     slug: 'services',
     name: 'Service businesses',
-    blurb: 'A card that stays in their wallet between jobs.',
+    blurb: 'Stay top of mind between jobs.',
     accent: '#0f766e',
     assetKey: 'other',
-    metaTitle: 'Digital stamp card for service businesses | Loyalties',
+    metaTitle: 'Loyalty card and email marketing for service businesses | Loyalties',
     metaDescription:
-      "Loyalties puts your business's stamp card in Apple Wallet and Google Wallet. Staff scan to stamp. No app to download. Free to start.",
+      "Put your business's stamp card in Apple Wallet and Google Wallet, then email the clients who opted in when the season turns. Free to start.",
     hero: 'Stay top of mind between jobs, automatically.',
-    subtext: 'Scan the pass when the job is done. Clients keep it between visits.',
+    subtext:
+      "Put a digital reward card in your clients' wallets and email them when the season turns.",
     problems: [
       {
         feature: 'wallet',
@@ -848,8 +857,8 @@ export const industries: Industry[] = [
         answer: 'Yes. The page clients see after each stamp can carry a link.',
       },
     ],
-    ctaHeading: "Start your business's card.",
-    cta: 'Start your card',
+    ctaHeading: 'Be the number they remember.',
+    cta: 'Start for free',
   },
 ]
 

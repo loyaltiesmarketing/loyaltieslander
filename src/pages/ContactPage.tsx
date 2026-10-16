@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { APP_URL } from '../data/site'
+import { usePageMeta } from '../lib/usePageMeta'
 import styles from './ContactPage.module.css'
 
 type Answer = {
@@ -186,6 +187,11 @@ const steps: Step[] = [
 ]
 
 export function ContactPage() {
+  usePageMeta(
+    'Contact | Loyalties',
+    'Get help with your Loyalties account, billing, privacy requests or venue support.',
+  )
+
   const [stepId, setStepId] = useState('who')
   const [history, setHistory] = useState<string[]>(['who'])
   const [result, setResult] = useState<Result | null>(null)
@@ -228,7 +234,7 @@ export function ContactPage() {
   return (
     <div className={`container ${styles.page}`}>
       <p className={styles.eyebrow}>Help</p>
-      <h1 className={styles.title}>Contact</h1>
+      <h1 className={styles.title}>Contact Loyalties support</h1>
       <p className={styles.lede}>
         Answer a couple of quick questions and we’ll point you to the right place.
       </p>

@@ -1,9 +1,8 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { APP_URL } from '../data/site'
-import { publicAssetUrl } from '../lib/assets'
 import styles from './HeroStampGrid.module.css'
 
-const HERO_VIDEO = publicAssetUrl('cosmos_1710149938 (1).mp4')
+const HERO_VIDEO = '/hero.webm'
 const HERO_POSTER = '/hero-poster.jpg'
 
 type Stamp = { label?: string }
@@ -170,7 +169,7 @@ export function HeroStampGrid() {
                       aria-hidden
                       tabIndex={-1}
                     >
-                      <source src={HERO_VIDEO} type="video/mp4" />
+                      <source src={HERO_VIDEO} type="video/webm" />
                     </video>
                     <img
                       className={`${styles.stampPoster} ${videoPlaying ? styles.stampPosterHidden : ''}`}
